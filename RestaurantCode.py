@@ -1,6 +1,6 @@
 import pandas as pd
 
-#replace liink with non-dynamic link
+#replace link with non-dynamic link
 df = pd.read_csv("https://raw.githubusercontent.com/BrentV23/Brent-V-Data-Science/master/Restaurant_Data.csv")
 
 df.head()
