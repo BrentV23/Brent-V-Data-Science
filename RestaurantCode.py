@@ -1,28 +1,23 @@
 import pandas as pd
 
-#replace link with non-dynamic link
 df = pd.read_csv("https://raw.githubusercontent.com/BrentV23/Brent-V-Data-Science/master/Restaurant_Data.csv")
 
-df.head()
-
-cuisineValid = False
-while cuisineValid == False:
-  cuisine = input("Enter cuisine: ")
-  if cuisine == "Western" or "Asian":
-    cuisineValid = True
+def filter():
+  cuisine_valid = False
+  while cuisine_valid == False:
+    cuisine = input("Enter Cuisine: ")
+    if cuisine == "Western" or cuisine == "Asian":
+      cuisine_valid = True
   
-    
-deliveryValid = False
-while deliveryValid == False:
-  delivery = input("Delivery?: ")
-  if delivery == "Yes" or "yes" or "y" or "Y":
-    deliveryValid = True
-  
+  delivery_valid = False
+  while delivery_valid == False:
+    delivery = input("Delivery?: ")
+    if delivery == "Yes" or delivery == "yes" or delivery == "Y" or delivery == "y":
+      delivery_valid = True
 
-locationValid = False
-while locationValid == False:
-  location = input("Enter cuisine: ")
-  if location == "Western" or "Asian":
-    locationValid = True
-  
-
+  location_valid = False
+  while location_valid == False:
+    location = input("Enter Location: ")
+    if location == "Belconnen" or location == "CBD" or location == "Woden" or location == "Gungahlin":
+      location_valid = True
+filter()
