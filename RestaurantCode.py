@@ -61,11 +61,11 @@ while locationValid == False:
 
 ratingValid = False
 while ratingValid == False:
-  rating = input("you you care about shitty food?: ").lower()
-  if rating == "yes" or rating == "y":
+  rating = input("Any rating?: ").lower()
+  if rating == "no" or rating == "n":
     ratingValid = True
     rating = "Yes"
-  elif rating == "no" or rating == "n":
+  elif rating == "yes" or rating == "y":
     ratingValid = True
     rating = "No"
 
@@ -102,6 +102,11 @@ if location == "Any":
   ifthisisntherethenthisdoesntwork = 1
 else:
   df[df.Location == location]
-Open
-# df[df[Open] <= str(datetime.now()) & 
+
+df[df[Open] <= str(datetime.now())]  
 df[df[Close] >= str(datetime.now())]
+
+
+
+
+
