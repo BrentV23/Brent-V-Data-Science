@@ -1,4 +1,4 @@
-Restaurant,Location,Cuisine,Average_rating,Delivery,Opening_Monday,Closing_Monday,Opening_Tuesday,Closing_Tuesday,Opening_Wednesday,Closing_Wednsday,Opening_Thursday,Closing_Thursday,Opening_Friday,Closing_Friday,Opening_Saturday,Closing_Saturday,Opening_Sunday,Closing_Sunday
+Restaurant,Location,Cuisine,Average_rating,Delivery,Opening_Monday,Closing_Monday,Opening_Tuesday,Closing_Tuesday,Opening_Wednesday,Closing_Wednesday,Opening_Thursday,Closing_Thursday,Opening_Friday,Closing_Friday,Opening_Saturday,Closing_Saturday,Opening_Sunday,Closing_Sunday
 Bella Vista Restaurant,Belconnen,Western,0.7,Yes,12.00,21.30,12.00,21.30,12.00,21.30,12.00,21.30,12.00,21.30,17.30,21.30,0.00,0.00
 Pho Hub,Belconnen,Asian,4.5,Yes,17.00,22.00,17.00,22.00,10.30,22.00,10.30,22.00,10.30,22.00,17.00,22.00,17.00,22.00
 The Lighthouse Bar,Belconnen,Western,4.2,No,11.00,22.00,11.00,22.00,11.00,23.00,11.00,23.00,11.00,3.00,11.00,3.00,11.00,22.00
