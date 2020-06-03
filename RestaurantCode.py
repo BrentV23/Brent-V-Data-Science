@@ -12,7 +12,8 @@ if y == 7:
 
 
 
-df = pd.read_csv("https://raw.githubusercontent.com/BrentV23/Brent-V-Data-Science/master/Restaurant_Data_New_New.csv")
+#df = pd.read_csv("https://raw.githubusercontent.com/BrentV23/Brent-V-Data-Science/master/Restaurant_Data_New_New.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/BrentV23/Brent-V-Data-Science/master/Restaurant_Data_New_New.csv", parse_dates=[5,6,7,8,9,10,11,12,13,14,15,16,17,18])
 
 cuisineValid = False
 while cuisineValid == False:
@@ -101,13 +102,6 @@ if location == "Any":
   ifthisisntherethenthisdoesntwork = 1
 else:
   df[df.Location == location]
-
-col = df[Open]
-df[col >= 10]
-df
-#print("I wanna die")
-
-
-
-
-
+Open
+# df[df[Open] <= str(datetime.now()) & 
+df[df[Close] >= str(datetime.now())]
