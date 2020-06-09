@@ -1,5 +1,6 @@
 import pandas as pd
 from datetime import*
+from math import*
 
 x = datetime.now().hour + 10
 y= datetime.date(datetime.now()).weekday()
@@ -10,10 +11,11 @@ if x > 23:
 if y == 7:
   y = 0
 
+trueTime = x + z/100
 
 
-#df = pd.read_csv("https://raw.githubusercontent.com/BrentV23/Brent-V-Data-Science/master/Restaurant_Data_New_New.csv")
-df = pd.read_csv("https://raw.githubusercontent.com/BrentV23/Brent-V-Data-Science/master/Restaurant_Data_New_New.csv", parse_dates=[5,6,7,8,9,10,11,12,13,14,15,16,17,18])
+df = pd.read_csv("https://raw.githubusercontent.com/BrentV23/Brent-V-Data-Science/master/Restaurant_Data_New_New.csv")
+#df = pd.read_csv("https://raw.githubusercontent.com/BrentV23/Brent-V-Data-Science/master/Restaurant_Data_New_New.csv", parse_dates=[5,6,7,8,9,10,11,12,13,14,15,16,17,18])
 
 cuisineValid = False
 while cuisineValid == False:
@@ -61,33 +63,38 @@ while locationValid == False:
 
 ratingValid = False
 while ratingValid == False:
-  rating = input("Any rating?: ").lower()
-  if rating == "no" or rating == "n":
+  rating = input("you you care about shitty food?: ").lower()
+  if rating == "yes" or rating == "y":
     ratingValid = True
     rating = "Yes"
-  elif rating == "yes" or rating == "y":
+  elif rating == "no" or rating == "n":
     ratingValid = True
     rating = "No"
 
 if y == 0:
-  day = "Monday"
+  df = df[df.Opening_Monday <= trueTime]
+  df = df[df.Closing_Monday >= trueTime]
 elif y== 1:
-  day = "Tuesday"
+  df = df[df.Opening_Tuesday <= trueTime]
+  df = df[df.Closing_Tuesday >= trueTime]
 elif y == 2:
-  day = "Wednesday"
+  df = df[df.Opening_Wednesday <= trueTime]
+  df = df[df.Closing_Wednesday >= trueTime]
 elif y == 3:
-  day = "Thursday"
+  df = df[df.Opening_Thursday <= trueTime]
+  df = df[df.Closing_Thursday >= trueTime]
 elif y == 4:
-  day = "Friday"
+  df = df[df.Opening_Friday <= trueTime]
+  df = df[df.Closing_Friday >= trueTime]
 elif y == 5:
-  day = "Saturday"
+  df = df[df.Opening_Saturday <= trueTime]
+  df = df[df.Closing_Saturday >= trueTime]
 elif y == 6:
-  day = "Sunday"
+  df = df[df.Opening_Sunday <= trueTime]
+  df = df[df.Closing_Sunday >= trueTime]
 
-Open = "Opening_" + day  
-Close = "Closing_" + day
 
-#test = "df." + Open
+
 if delivery == "Yes":
   df = df[df.Delivery == delivery]
 
@@ -99,14 +106,9 @@ if rating == "Yes":
   df = df[df.Average_rating >= 4]
 
 if location == "Any":
-  ifthisisntherethenthisdoesntwork = 1
+  trash = 1
 else:
   df[df.Location == location]
 
-df[df[Open] <= str(datetime.now())]  
-df[df[Close] >= str(datetime.now())]
-
-
-
-
+df
 
